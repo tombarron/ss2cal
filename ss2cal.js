@@ -1,7 +1,8 @@
 
   function scheduleBills() {
 
-    Logger = BetterLog.useSpreadsheet('18lWGMrDnVb28SOqZi7eXyY0nQOrYJ5x_fF7vroJHn6I');
+    // BetterLog creates a handy sheet with the log output from this appscript
+    Logger = BetterLog.useSpreadsheet('PUT-YOUR-SPREADSHEET-ID-HERE');
     BetterLog.setLevel("INFO");
 
     /**
