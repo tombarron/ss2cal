@@ -12,7 +12,6 @@
     // The Calendar ID is stored at the top left of the 'Calendar ID' sheet.
     const calendar = CalendarApp.getOwnedCalendarById(sheet.getRange('Calendar ID!A1').getValue());
 
-    console.log("hi there");
     /**
       *  Pull bill event data from the Spreadsheet.
       */
@@ -101,6 +100,13 @@
     const cols = getColumnHeaderIndexes(header);
     const id = rowData[cols.id];
     let calendarEvent = calendar.getEventById(id);
+
+    const newWhen = rowData[cols.when];
+    const oldWhen = calendarEvent.getAllDayStartDate();
+    if (newWhen.getTime() !== oldWhen.getTime()) {
+      calendarEvent = calendarEvent.setAllDayDate(newWhen);
+      Logger.log(`Updated calendar event for spreadsheet row ${idx2SSRow(i)} with new all day date: "${newWhen}".`);
+    }
 
     const newTitle = rowData[cols.payee];
     const oldTitle = calendarEvent.getTitle();
