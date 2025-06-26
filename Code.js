@@ -1,5 +1,3 @@
-// Annabelle
-
 function scheduleBills() {
 
   Logger = setUpLogger();
@@ -92,9 +90,9 @@ function refreshCalendarEvent(mappedRow) {
 
   const newWhen = mappedRow.get("when");
   const oldWhen = calendarEvent.getAllDayStartDate();
-  if (newWhen.getTime() !== oldWhen.getTime()) {
+  if (newWhen.toDateString() !== oldWhen.toDateString) {
     calendarEvent.setAllDayDate(newWhen);
-    Logger.info(`Updated calendar event for spreadsheet row ${row} with new all day date: "${newWhen}".`);
+    Logger.info(`Updated calendar event for spreadsheet row ${row} with new all day date: "${formatDate(newWhen)}".`);
   }
 
   const newTitle = mappedRow.get("payee");
