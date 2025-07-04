@@ -1,7 +1,7 @@
 
 // Betterlog logs to spreadsheet
 // See: https://github.com/peterherrmann/BetterLog for code and setup instructions
-function setUpLogger() {
+function setupLogger() {
     // Put your spreadsheet ID between the single quotes
     Logger = BetterLog.useSpreadsheet('1D0QgOlO0-_wp68tXtdUKBlXgvDwU3TgwtHHZno3EZ2s');
 

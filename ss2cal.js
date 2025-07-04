@@ -1,6 +1,6 @@
 function scheduleBills() {
 
-  Logger = setUpLogger();
+  Logger = setupLogger();
 
   /**
    *  Open the Spreadsheet and the Calendar
