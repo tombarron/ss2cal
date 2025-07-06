@@ -14,7 +14,7 @@ You need a Google [account](https://myaccount.google.com/).  We provide a [sampl
 
 Change the name of your copy to something appropriate.
 
-[image][img2]
+![image][img2]
 
 Your workbook starts with two tabbed sheets, labelled _Bill Events_, _Calendar ID_, and a third, labelled _Log_, is added when the Apps Script first runs.
 
